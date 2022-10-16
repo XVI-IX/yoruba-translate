@@ -1,0 +1,38 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - command
+  - mood_great
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "Pẹlẹ o"
+  - text: "Bawo ni o ṣe n ṣe"
+  - text: "ikini fun ọ"
+  - text: "mo wa dada"
+  - text: "o dara o ṣeun"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "O dara lati ba ọ sọrọ"
+  - text: "Ma a ri e laipe"
+  - text: "Sọ laipẹ!"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
