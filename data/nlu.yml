@@ -1,64 +1,56 @@
 version: "3.1"
-
 nlu:
 - intent: greet
   examples: |
-    - Pẹlẹ o 
-    - Bawo ni o se wa 
-    - Pẹlẹ o bawo ni 
-    - Bawo ni nibe yen o 
+    - Pẹlẹ o
+    - Bawo ni o se wa
+    - Pẹlẹ o bawo ni
+    - Bawo ni nibe yen o
     - kilode
-
+    - Bawo ni
 - intent: goodbye
   examples: |
-    - o dabọ 
+    - o dabọ
     - ri ọ
     - titi a o tun pade
     - nigbamii
-
-# - intent: affirm
-#   examples: |
-#     - yes
-#     - y
-#     - indeed
-#     - of course
-#     - that sounds good
-#     - correct
-
-# - intent: deny
-#   examples: |
-#     - no
-#     - n
-#     - never
-#     - I don't think so
-#     - don't like that
-#     - no way
-#     - not really
-
+    - o daabo o
+- intent: command
+  examples: |
+    - tan fan
+    - tan ina
+    - si ilekun
+    - pa ilẹkun
+    - Pa fan
+    - tan fan [kitchen](place)
+    - tan ina [kitchen](place)
+    - si ilekun [kitchen](place)
+    - pa ilẹkun [kitchen](place) de
+    - Pa fan [kitchen](place)
+    - tan fan [iyara](place)
+    - tan ina [iyara](place)
+    - si ilekun [iyara](place)
+    - pa ilẹkun [iyara](place) de
+    - Pa fan [iyara](place)
+    - tan fan [parlour](place)
+    - tan ina [parlour](place)
+    - si ilekun [parlour](place)
+    - pa ilẹkun [parlour](place) de
+    - Pa fan [parlour](place)
+- intent: deny
+  examples: |
+    - rara
+    - kosi
+    - ma worry
+    - o ti da bayi
 - intent: mood_great
   examples: |
     - mo wa oo
-
-# - intent: mood_unhappy
-#   examples: |
-#     - my day was horrible
-#     - I am sad
-#     - I don't feel very well
-#     - I am disappointed
-#     - super sad
-#     - I'm so sad
-#     - sad
-#     - very sad
-#     - unhappy
-#     - not good
-#     - not very good
-#     - extremly sad
-#     - so saad
-#     - so sad
-
-# - intent: bot_challenge
-#   examples: |
-#     - are you a bot?
-#     - are you a human?
-#     - am I talking to a bot?
-#     - am I talking to a human?
+    - ko si wahala
+    - hmmmmm
+- intent: affirm
+  examples: |
+    - ehn
+    - beeni
+    - o si ku
+    - awon ise kan si ku

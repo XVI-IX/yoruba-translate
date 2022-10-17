@@ -1,38 +1,68 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - greet
-  - goodbye
-  - command
-  - mood_great
+- affirm
+- command
+- deny
+- goodbye
+- greet
+- mood_great
+
+entities:
+- place:
+    influence_conversation: true
+
+slots:
+  place:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: place
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-  - text: "Pẹlẹ o"
-  - text: "Bawo ni o ṣe n ṣe"
-  - text: "ikini fun ọ"
-  - text: "mo wa dada"
-  - text: "o dara o ṣeun"
+  - text: Pẹlẹ o
+  - text: Bawo ni o ṣe n ṣe
+  - text: Bawo ni
+  - text: ikini fun ọ
+  - text: mo wa dada
+  - text: o dara o ṣeun
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_processcommand:
+  - text: ina ti tan
+  - text: mo ti pa ina naa
+  - text: mo ti silekun
+  - text: ololufẹ naa wa ni titan
+  - text: ilekun ti wa ni pipade
+  - text: mo to pa fan
+  - text: ina {place} ti tan
+  - text: mo ti pa ina {place}
+  - text: mo ti silekun {place}
+  - text: ololufẹ naa wa ni titan
+  - text: ilekun {place} ti wa ni pipade
+  - text: mo ti pa fan {place}
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  utter_askfortask:
+  - text: Ki ni kin se?
+  - text: Ki le fe se?
+  - text: Ki le fe kin se?
+  - text: Ki le sope kin se?
+  - text: Ise wo le fe ran mi?
 
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_askformore:
+  - text: se o si ku kin se?
+  - text: se fe se inkan mii?
 
   utter_goodbye:
-  - text: "O dara lati ba ọ sọrọ"
-  - text: "Ma a ri e laipe"
-  - text: "Sọ laipẹ!"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: O dara lati ba ọ sọrọ
+  - text: Ma a ri e laipe
+  - text: Sọ laipẹ!
+  - text: o da oo
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+actions:
+- utter_goodbye
+- utter_greet
