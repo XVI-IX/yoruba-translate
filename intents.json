@@ -1,0 +1,19 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Pẹlẹ o ", " Bawo ni o se wa?", " Pẹlẹ o bawo ni ", " Bawo ni nibe yen o ", " kilode "],
+      "responses": ["Pẹlẹ o", "Hello", " Bawo ni o ṣe n ṣe", " ikini fun ọ ", " mo wa dada", "mo wa dada", "o dara o ṣeun"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [ " o dabọ ", " ri ọ ", " titi a o tun pade ", " nigbamii "],
+      "responses": ["O dara lati ba ọ sọrọ ", " Ma a ri e laipe ", " Sọ laipẹ!"]
+    },
+    {
+      "tag": "command",
+      "patterns": [ "tan ina","pa ina", "si ilekun", "tan fan", " pa ilẹkun ", "Pa fan"],
+      "responses": ["ina ti tan ", "mo ti pa ina naa" ,"mo ti silekun ", " ololufẹ naa wa ni titan ", "ilekun ti wa ni pipade", "mo to pa fan"]
+    }
+  ]
+}
