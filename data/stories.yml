@@ -15,6 +15,7 @@ stories:
   - action: utter_greet
   - intent: mood_great
   - action: utter_askfortask
+  - intent: command
   - action: utter_processcommand
     # entities:
     #   - place
@@ -28,18 +29,21 @@ stories:
   - action: utter_greet
   - intent: mood_great
   - action: utter_askfortask
+  - intent: command
   - action: utter_processcommand
     # entities:
     # - place
   - action: utter_askformore
   - intent: affirm
   - action: utter_askfortask
+  - intent: command
   - action: utter_processcommand
     # entities:
     # - place
   - action: utter_askformore
   - intent: deny
   - action: utter_goodbye
+
 - story: interactive_story_1
   steps:
   - intent: greet

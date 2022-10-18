@@ -2,6 +2,9 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
+    - kaaro oo
+    - kasan
+    - kaale
     - Pẹlẹ o
     - Bawo ni o se wa
     - Pẹlẹ o bawo ni
@@ -15,6 +18,7 @@ nlu:
     - titi a o tun pade
     - nigbamii
     - o daabo o
+
 - intent: command
   examples: |
     - tan fan
@@ -37,17 +41,21 @@ nlu:
     - si ilekun [parlour](place)
     - pa ilẹkun [parlour](place) de
     - Pa fan [parlour](place)
+
 - intent: deny
   examples: |
     - rara
     - kosi
+    - ko si
     - ma worry
     - o ti da bayi
+
 - intent: mood_great
   examples: |
     - mo wa oo
     - ko si wahala
     - hmmmmm
+
 - intent: affirm
   examples: |
     - ehn
