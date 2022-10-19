@@ -1,19 +1,61 @@
 {
   "intents": [
     {
-      "tag": "greeting",
+      "tag": 0,
       "patterns": ["Pẹlẹ o ", " Bawo ni o se wa?", " Pẹlẹ o bawo ni ", " Bawo ni nibe yen o ", " kilode "],
       "responses": ["Pẹlẹ o", "Hello", " Bawo ni o ṣe n ṣe", " ikini fun ọ ", " mo wa dada", "mo wa dada", "o dara o ṣeun"]
     },
     {
-      "tag": "goodbye",
-      "patterns": [ " o dabọ ", " ri ọ ", " titi a o tun pade ", " nigbamii "],
-      "responses": ["O dara lati ba ọ sọrọ ", " Ma a ri e laipe ", " Sọ laipẹ!"]
+      "tag": 1,
+      "patterns": [ 
+        " o dabọ ", " ri ọ ",
+        " titi a o tun pade ",
+        " nigbamii "
+      ],
+      "responses": [
+        "O dara lati ba ọ sọrọ ", 
+        " Ma a ri e laipe ", " Sọ laipẹ!"
+      ]
     },
     {
-      "tag": "command",
-      "patterns": [ "tan ina","pa ina", "si ilekun", "tan fan", " pa ilẹkun ", "Pa fan"],
-      "responses": ["ina ti tan ", "mo ti pa ina naa" ,"mo ti silekun ", " ololufẹ naa wa ni titan ", "ilekun ti wa ni pipade", "mo to pa fan"]
+      "tag": 2,
+      "patterns": [
+        "si ilekun yẹn", 
+        " pa ilẹkun yẹn",
+        "si ilekun", "pa ilekun yen de",
+        "silẹkun"
+      ],
+      "responses": [
+        "mo ti silekun ", 
+        "ilekun ti wa ni pipade",
+        "mo ti pa ilekun yen de"
+      ]
+    },
+    {
+      "tag": 3,
+      "patterns": [
+        "tan fan yen", "tan fan",
+        "Pa fan yen", "Pa fan"
+      ],
+      "responses": [
+        "fan ti tan",
+        "mo ti pa fan naa",
+        "fan ti wa ni ti tan",
+        "mo ti pa fan"
+      ]
+    },
+    {
+      "tag": 4,
+      "patterns": [
+        "tan ina yen", "tan ina",
+        "Pa ina yen", "Pa ina"
+      ],
+      "responses": [
+        "ina ti tan",
+        "mo ti pa ina naa",
+        "ina ti wa ni ti tan",
+        "mo ti pa ina"
+      ]
     }
   ]
 }
