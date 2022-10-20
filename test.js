@@ -1,5 +1,10 @@
-// import * as tf from '@tensorflow/tfjs';
-const tf = require("@tensorflow/tfjs");
+var model = tf.loadLayersModel("./js model/model.json");
+
+// async function load_model() {
+
+//   const MODEL_URL = './js model/model.json';
+//   model = await tf.loadLayersModel(MODEL_URL);
+// }
 
 const word_index = {
   "<OOV>": 1, "o": 2, "yen": 3,
@@ -12,6 +17,14 @@ const word_index = {
   "titi": 21, "a": 22, "tun": 23, 
   "pade": 24, "nigbamii": 25, "il\u1eb9kun": 26, 
   "de": 27, "sil\u1eb9kun": 28
+}
+
+const intents_mapping = {
+  0: 'greeting',
+  1: 'goodbye',
+  2: 'command.door',
+  3: 'command.fan',
+  4: 'command.ina'
 }
 
 let sequence = [];
@@ -29,13 +42,11 @@ console.log(sequence);
 while (sequence.length < 20) {
   sequence.unshift(0);
 }
-console.log(sequence);
-console.log(sequence.length);
+// console.log(sequence);
+// console.log(sequence.length);
 
-const model = tf.loadLayersModel('./js model/model.json');
-
-const padded_sequence = tf.tensor(sequence);
-const prediction = model.predict(padded_sequence);
+const padded_sequence = tf.tensor([sequence]);
+var prediction = model.predict(padded_sequence);
 
 console.log(prediction);
 
