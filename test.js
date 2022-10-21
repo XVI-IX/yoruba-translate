@@ -1,11 +1,3 @@
-// var model = tf.loadLayersModel("./js model/model.json");
-
-// async function load_model() {
-
-//   const MODEL_URL = './js model/model.json';
-//   m = await tf.loadLayersModel(MODEL_URL);
-// }
-
 const word_index = {
   "<OOV>": 1, "o": 2, "yen": 3,
   "pa": 4, "tan": 5, "fan": 6, 
@@ -37,13 +29,9 @@ for (let i = 0; i < text.length; i++) {
   sequence.push(word_index[text[i]]);
 }
 
-// console.log(sequence);
-
 while (sequence.length < 20) {
   sequence.unshift(0);
 }
-// console.log(sequence);
-// console.log(sequence.length);
 
 async function processModel(seq){
   const model = await tf.loadLayersModel('./js model/model.json');
@@ -56,8 +44,5 @@ async function processModel(seq){
 }
 
 const padded_sequence = tf.tensor([sequence]);
-// var prediction = model.predict(padded_sequence);
-
-console.log(processModel(padded_sequence));
-// console.log(prediction);
+processModel(padded_sequence);
 
