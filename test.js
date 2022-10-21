@@ -29,7 +29,7 @@ const intents_mapping = {
 
 let sequence = [];
 
-let text = "Pa ina";
+let text = "pa fan";
 text = text.toLowerCase();
 text = text.split(" ")
 
@@ -37,7 +37,7 @@ for (let i = 0; i < text.length; i++) {
   sequence.push(word_index[text[i]]);
 }
 
-console.log(sequence);
+// console.log(sequence);
 
 while (sequence.length < 20) {
   sequence.unshift(0);
@@ -47,14 +47,17 @@ while (sequence.length < 20) {
 
 async function processModel(seq){
   const model = await tf.loadLayersModel('./js model/model.json');
-  const pred = model.predict(seq).squeeze().argMax().print();
+  const pred = model.predict(seq);
 
-  console.log(pred);
+  const output = await pred.argMax(1).dataSync()[0]
+  // const pred = model.predict(seq).squeeze().argMax().array();
+
+  console.log(intents_mapping[output]);
 }
 
 const padded_sequence = tf.tensor([sequence]);
 // var prediction = model.predict(padded_sequence);
 
-processModel(padded_sequence);
+console.log(processModel(padded_sequence));
 // console.log(prediction);
 
