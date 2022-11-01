@@ -21,13 +21,15 @@ const intents_mapping = {
 
 let sequence = [];
 
-let text = "pa fan";
+let text = "oon ina";
 text = text.toLowerCase();
 text = text.split(" ")
 
 for (let i = 0; i < text.length; i++) {
   sequence.push(word_index[text[i]]);
 }
+
+console.log(sequence);
 
 while (sequence.length < 20) {
   sequence.unshift(0);
